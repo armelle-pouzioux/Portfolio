@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+    scroll-padding-top: 120px;
+}
+
+
+:root {
+    --c-bg: #f5f5f5;
+    --c-text: hsl(0, 0%, 10%);
+    --fs-text: 12px;
+    --ff-text: "Montserrat", sans-serif;
+    --c-border:hsla(0, 0%, 10%, 0.4);
+    --ff-hover:"Jacquarda Bastarda 9", serif;
+    --c--hover:rgb(133, 1, 23);
+}
+
+body {
+    width: auto;
+    background-color: var(--c-bg);
+    font-size: var(--fs-text);
+    font-family: var(--ff-text);
+    height:100%;
+}
+
+a {
+    text-decoration:underline;
+    font-style: oblique;
+}
+
+a:hover{
+    color: var(--c--hover)
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 1.7em;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* HEADER */
+
+
+header{
+    position: fixed;
+    display: flex;
+    flex-flow: wrap column;
+    width: 100%;
+    z-index: 1;
+    margin-left: 10px;
+}
+
+.header_title{
+    background-color: var(--c-bg);
+    z-index: 2;
+}
+
+.header_nav{
+    margin-top: 50px;
+    font-size: 14px;
+    max-width: 20%;
+}
+.header_nav ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.header_nav ul li:hover{
+    font-family:var(--ff-hover);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.header_nav ul{
+    list-style: none;
+    text-decoration: none;
+    color: var(--c-text);
+    
+}
+
+.header_nav a {
+    text-decoration: none;
+    color: var(--c-text);
+    position: relative;
+    font-weight: bold;
+    font-style:normal;
+    transition: font-size 0.3s ease, color 0.3s ease; 
+}
+
+
+/* HOME */
+main{
+    position: absolute;
+    display: flex;
+    flex-flow: nowrap column;
+    font-size: var(--fs-text);
+    top: 20%;
+
+    
+}
+
+.home_text{
+    display:flex;
+    flex-flow: nowrap column;
+    justify-content: flex-end;
+    max-width: 50%;
+    margin-left: 40%;
+    margin-top:25%;
+    margin-bottom: 25%;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+
+.home_contact{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a svg {
+    border-radius: 10px;
+    background-color: var(--c-bg);
+    transition: filter 0.3s ease; /* Transition fluide */
+  }
+  
+  a:hover svg {
+    filter: invert(100%);
+  }
+
+
+/* ABOUTME */
+
+#about {
+    margin-top: 100px;
+}
+
+
+
+.about_text{
+    margin-left:30%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: justify;
+    margin-bottom: 14%;
+}
+
+
+.about_skills{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+}
+
+/* STAR */
+.waitingstar{
+    display: none;
+}
+
+/* PROJECTS */
+
+.project{
+    margin:60%0;
+    display: flex;
+    flex-flow: nowrap column;
+    text-align: right;
+    max-width: 40%;
+    margin-left: 50%;
+    font-size: var(--fs-text);
+}
+
+
+.project button{
+    background-color: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--ff-text);
+    z-index: 4;
+    margin-top: 15%;
+    padding: 1em;
+    border-radius: 10px;
+
+}
+
+.project button:hover{
+    font-family:var(--ff-hover);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+
+
