@@ -214,7 +214,7 @@ header {
     padding: 10px;
     border-radius: 20px;
     background-color: #ffff;
-    box-shadow: 2px 2px 4px #FED800;
+    box-shadow: 2px 2px 4px var(--secondary-color);
     gap:10px;
 
     
@@ -226,6 +226,11 @@ header {
         background-color: #ffff;
     }
 
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px #FED800;
 }
 
 .box-learn{
@@ -682,7 +687,6 @@ header {
         gap:10px;
         border-radius: 20px;
         background-color: #ffff;
-        box-shadow: 2px 2px 4px #FED800;
         border: var(--secondary-color) solid 1px;
     }
     
