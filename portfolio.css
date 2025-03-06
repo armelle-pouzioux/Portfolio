@@ -631,16 +631,16 @@ header {
         }
 
         svg{
-            height: 70px;
-            width: 70px;
+            height: 50px;
+            width: 50px;
             transition: transform 0.3s ease-in-out;
         }
 
         li a:hover {
 
             svg {
-                width: 75px;
-                height: 75px;
+                width: 55px;
+                height: 55px;
                 transform: scale(1.1);
             }
 
