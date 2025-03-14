@@ -2,6 +2,8 @@
     --primary-color: #f5f5f5;
     --secondary-color: #1e1e1e;
     --tertiary-color: #a01010;
+    --transparent-color1:#ffffffa6;
+    --transparent-color2:#f5f5f5d5;
     --font-1: "Montserrat", serif;
     --font-2: "Jacquard 12", serif;
 }
@@ -12,7 +14,6 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-    background-color: var(--primary-color);
     color: var(--secondary-color);
     font-family: var(--font-1);
     scroll-behavior: smooth;
@@ -22,29 +23,32 @@ main{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-
 }
 
-h2{
-    background-color: #ffff;
+h2{ 
     font-weight: normal;
 }
 
 .special-font {
     font-family: var(--font-2);
     font-size: 2.4em;
-    color:var(--secondary-color);
-    background-color: #ffff;
 }
 
-
 p{
-    background-color: #ffff;
     font-size: 14px;
     text-align: justify;
     line-height: 155%;
 }
 
+.background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
 /* HEADER */
 header {
     position: fixed;
@@ -54,13 +58,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
-    background-color: var(--primary-color);
     z-index: 1000;
+    background-color: var(--transparent-color2);
 }
 
 .header-name h1 {
     font-size: 20px;
-    color: var(--secondary-color);
 }
 
 #hamburger-logo {
@@ -85,10 +88,10 @@ header {
 
 .menuBurger{
     position: fixed;
-    top: 50px;
+    top: 60px;
     right: 0;
     width: 120px;
-    background: var(--primary-color);
+    background: var(--transparent-color2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,7 +101,6 @@ header {
 }
 
 .menuBurger a {
-    color: var(--secondary-color);
     text-decoration: none;
     padding: 10px;
     transition: background 0.3s ease-in-out;
@@ -112,40 +114,24 @@ header {
     transform: translateX(0);
 }
 
-
 /* INDEX */
 
 .index{
     display: flex;
     flex-flow: column nowrap ;
     align-items: center;
-    background-color: var(--primary-color);
     margin-top: 90px;
 }
 
 .index-text{
-    border: var(--secondary-color) solid 1px;
     width: 80%;
     padding: 20px;
     border-radius: 20px;
-    background-color: #ffff;
-    box-shadow: 2px 2px 4px #d3b301;
+    background-color: var(--transparent-color1);
 
     h1{
-        font-size: 28px;
-        background-color: #ffff;
         margin-bottom: 5%;
-        font-weight: normal;
     }
-
-    .special-font {
-        font-family: var(--font-2);
-        font-size: 2.4em;
-        color: var(--secondary-color);
-        background-color: #ffff;
-    }
-
-
 }
 
 .index-link{
@@ -165,13 +151,11 @@ header {
     }
 
     li a:hover {
-
         svg {
             width: 50px;
             height: 50px;
             transform: scale(1.1);
         }
-
     }
 }
 
@@ -182,21 +166,10 @@ header {
     gap: 15px;
     padding: 10px;
     position:relative;
-
-    article{
-        border: 1px solid var(--secondary-color);
-    }
 }
 
 #about{
-    background-color: var(--primary-color);
-    width: 100%;
-    margin-left: 10%;
-    
-
-    .special-font{
-        background-color: var(--primary-color);
-    }
+    padding:65px 10% 2%;;
 }
 
 .aboutme::before {
@@ -210,102 +183,87 @@ header {
 .box{
     display: flex;
     flex-flow: column wrap;
-    border: var(--secondary-color) solid 1px;
     padding: 10px;
     border-radius: 20px;
-    background-color: #ffff;
+    background-color: var(--transparent-color1);
     box-shadow: 2px 2px 4px var(--secondary-color);
     gap:10px;
 
-    
     h2{
         font-size: 18px;
     }
-
-    ul li, p{
-        background-color: #ffff;
-    }
-
 }
 
 .box:hover {
     transform: scale(1.05);
-    box-shadow: 4px 4px 15px #FED800;
+    box-shadow: var(--secondary-color);
 }
 
 .box-learn{
     display: flex;
     width: 100%;
-    gap:5px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .box-container {
     display: flex;
     width: 100%;
-    gap: 10px;
-    background-color: #ffff
+}
+
+.box-journey {
+    width: 100%; 
+}
+
+.box-learnjourney{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
 }
 
 .box-learning,.box-learned{
     flex: 1;
     min-width: 0;
-    background-color: #ffff;
 }
+
 .box-learning {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(2, 1fr); 
-    gap: 30px;
+    gap: 25px;
 }
 
 .box-learned {
     display: flex;
     flex-direction: column; 
-    gap: 5px;
-    
+    width: 120px;;
+    gap: 25px;
 }
-
 
 .box-learning svg,
 .box-learned svg {
     height: 40px;
     width: 40px;
-    background-color: #ffff;
     fill: currentColor;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto; 
-    
 }
 
-
-.box-journey {
-    width: 100%; 
-    margin-top: 20px;
-}
-
-
-.starskill-box{
+.box-skillsmore{
     display: flex;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    gap:15px;
     width: 100%;
     align-items: center;
-
-    img{
-        width: 85px;
-        height: 95px;
-    }
-
-    ul{
-        background-color: #ffff;
-    }
-
+    
     ul li{
         list-style-type:circle;
-        margin-left: 10%;
-        background-color: #ffff;
+        margin-left: 15px;
+    }
+
+    .box-skills{
+        width: 100%;
     }
 }
 /* PROJETS */
@@ -314,14 +272,8 @@ header {
     display: flex;
     flex-flow: column wrap;
 
-
     h2{
-        background-color: var(--primary-color);
         margin:20% 10% 2%;
-
-        .special-font{
-            background-color: var(--primary-color);
-        }
     }
 
     .boxs-projects{
@@ -332,10 +284,9 @@ header {
         padding: 3%;
     }
     .box-project{
-        border: var(--secondary-color) solid 1px;
         padding: 10px;
         border-radius: 20px;
-        background-color: #ffff;
+        background-color:var(--transparent-color1);
         box-shadow: 2px 2px 4px #1e1e1e;
         gap:10px;
         transition: transform 0.3s ease-in-out;  
@@ -346,26 +297,22 @@ header {
         justify-content: center;
 
         h3{
-            background-color: #ffff;
             font-size: 16px;
 
             .special-font{
-                background-color: #ffff;
+                font-weight: normal;
             }
-
         }
     }
 
     button {
-        color:var(--secondary-color);
         font-size: 10px;
         font-weight: bold;
-        border: 1px solid var(--secondary-color);
+        border: 1px solid var(--transparent-color1);
         border-radius: 20px;
         padding: 10px 14px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        box-shadow: 2px 2px 4px #FED800;
         text-transform: uppercase;
     }
     
@@ -373,7 +320,7 @@ header {
         transform: scale(1.05);
         background: var(--secondary-color);
         color: var(--primary-color);
-        box-shadow: 4px 4px 15px #FED800;
+        box-shadow: var(--secondary-color);
     }
 
 }
@@ -415,14 +362,9 @@ header {
     }
     
     #about{
-        background-color: var(--primary-color);
         width: 100%;
         margin-left: 10%;
-        
-    
-        .special-font{
-            background-color: var(--primary-color);
-        }
+
     }
     
     .aboutme::before {
@@ -440,7 +382,7 @@ header {
         gap:10px;
         border-radius: 20px;
         background-color: #ffff;
-        box-shadow: 2px 2px 4px #1e1e1e;
+        box-shadow: var(--secondary-color);
         border: var(--secondary-color) solid 1px;
     }
     
@@ -521,9 +463,7 @@ header {
         gap:10px;
     
         img{
-            display: flex;
-            width: 80px;
-            height: auto;
+            display: none;
         }
     
         ul{
@@ -591,18 +531,15 @@ header {
         display: flex;
         flex-flow: column nowrap ;
         align-items: center;
-        background-color: var(--primary-color);
         margin-top: 190px;
     }
 
     .index-text{
-        border: var(--secondary-color) solid 1px;
         width: 80%;
         height: 250px;
         padding: 20px;
         border-radius: 20px;
-        background-color: #ffff;
-        box-shadow: 2px 2px 4px #FED800;
+        background-color:var(--transparent-color1);
         
 
         p{
@@ -611,7 +548,6 @@ header {
 
         h2{
             font-size: 30px;
-            background-color: #ffff;
             margin-bottom: 2%;
             font-weight: normal;
         }
@@ -620,7 +556,6 @@ header {
             font-family: var(--font-2);
             font-size: 2.4em;
             color: var(--secondary-color);
-            background-color: #ffff;
         }
 
     }
@@ -662,14 +597,8 @@ header {
     }
     
     #about{
-        background-color: var(--primary-color);
         width: 100%;
         padding: 7% 0 0 2%;
-        
-    
-        .special-font{
-            background-color: var(--primary-color);
-        }
     }
     
     .aboutme::before {
@@ -763,7 +692,7 @@ header {
     .box-skillsmore{
         display: flex;
         width: 350px;
-        flex-flow: column wrap;
+        flex-flow: row nowrap;
         gap:10px;
         justify-content: space-between;
     }
@@ -802,13 +731,8 @@ header {
 
 
     h2{
-        background-color: var(--primary-color);
         padding: 7% 0 0 2%;
-        margin :0 0 0 10%;  
-
-        .special-font{
-            background-color: var(--primary-color);
-        }
+        margin :0 0 0 10%; 
     }
 
     .boxs-projects{
@@ -854,7 +778,7 @@ header {
         padding: 10px 14px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        box-shadow: 2px 2px 4px #FED800;
+        box-shadow: var(--secondary-color);
         text-transform: uppercase;
     }
     
@@ -862,7 +786,7 @@ header {
         transform: scale(1.05);
         background: var(--secondary-color);
         color: var(--primary-color);
-        box-shadow: 4px 4px 15px #FED800;
+        box-shadow: var(--secondary-color);
     }
 
 }
