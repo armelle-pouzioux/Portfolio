@@ -472,5 +472,36 @@ footer {
 }
 }
 
+@media screen and (min-width: 1024px){
+    @media (min-width: 1024px){
+        .header-name h1 {
+            font-size: 30px;
+        }
+
+        #hambuger-logo{
+            font-size: 30px;
+        }
+
+        h1{
+            font-size: larger;
+        }
+
+        h2{
+            font-size: larger;
+        }
+        
+        .special-font {
+            font-family: var(--font-2);
+            font-size: 3em;
+        }
+        
+        p{
+            font-size: 14px;
+            text-align: justify;
+            line-height: 155%;
+        }
+    }
+}
+
 
     
