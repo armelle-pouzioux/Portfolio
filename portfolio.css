@@ -35,9 +35,9 @@ h2{
 }
 
 p{
-    font-size: 14px;
-    text-align: justify;
+    font-size: clamp(0.875rem, 3.5svw, 1rem);
     line-height: 155%;
+    text-align: justify;
 }
 
 .background-canvas {
@@ -63,12 +63,12 @@ header {
 }
 
 .header-name h1 {
-    font-size: 20px;
+    font-size: clamp(1.25rem, 5svw, 1.875rem);
 }
 
 #hamburger-logo {
     cursor: pointer;
-    font-size: 24px;
+    font-size: clamp(1.5rem, 6svw, 1.875rem);
     color: var(--secondary-color);
     padding: 10px;
     border-radius: 5px;
@@ -120,14 +120,18 @@ header {
     display: flex;
     flex-flow: column nowrap ;
     align-items: center;
+    justify-content: center;
     margin-top: 90px;
+    height: 100svh;
 }
 
 .index-text{
     width: 80%;
+    height: 40svh;
     padding: 20px;
     border-radius: 20px;
     background-color: var(--transparent-color1);
+    
 
     h1{
         margin-bottom: 5%;
@@ -183,12 +187,12 @@ header {
 .box{
     display: flex;
     flex-flow: column wrap;
-    padding: 10px;
+    padding: clamp(0.625rem, 2.5svw, 1.25rem);
     border-radius: 20px;
     background-color: var(--transparent-color1);
     box-shadow: 2px 2px 4px var(--secondary-color);
     gap:10px;
-    min-width:160px;
+    min-width:clamp(10rem, 40svw, 20rem);
 
     h2{
         font-size: 18px;
@@ -294,14 +298,14 @@ header {
   
 .box-project {
     flex: 0 0 auto; 
-    width: 150px;
-    padding: 10px;
+    width: clamp(9.375rem, 37.5svw, 18.75rem);
+    padding: clamp(0.625rem, 2.5svw, 1.25rem);
     border-radius: 20px;
     background-color: var(--transparent-color1);
     box-shadow: 2px 2px 4px #1e1e1e;
     gap: 10px;
     transition: transform 0.3s ease-in-out;
-    height: 300px;
+    height: clamp(18.75rem, 60svh, 37.5rem);
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
@@ -358,6 +362,7 @@ footer {
     }
     
     .index-text{
+        margin: 5% 0 0 0 ;
         .special-font {
             font-size: 2.7em;
         }
@@ -365,7 +370,7 @@ footer {
     
     p{
         font-size: 16px;
-        line-height: 175%;
+        line-height: 150%;
     }
 
     .index-link{
@@ -483,11 +488,11 @@ footer {
         }
 
         h1{
-            font-size: larger;
+            font-size: 30px;
         }
 
         h2{
-            font-size: larger;
+            font-size: 30px;
         }
         
         .special-font {
@@ -496,7 +501,7 @@ footer {
         }
         
         p{
-            font-size: 14px;
+            font-size: 22px;
             text-align: justify;
             line-height: 155%;
         }
